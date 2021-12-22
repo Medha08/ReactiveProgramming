@@ -1,6 +1,37 @@
 # Reactive Programming
 
-- [ ] Error Handling in Reactive Streams
+- [x] Introduction To Reactive programming 
+  - [x] Drawbacks of Imperative Programming
+  - [x] How Reactive Programming fits  in the picture
+  - [x] Concerns of Reactive Systems
+- [ ] Reactive Stream Specification
+- [x] Error Handling in Reactive Streams
+
+
+
+## Introduction To Reactive Programming 
+
+Drawbacks of Imperative Programming -:
+1. One Thread for One Request model is not scalable 
+2. Does not meet modern demands like high availability and low response time during high load
+3. Synchronous thread execution gets blocked for eg during I/O operations which  causes increase in response time 
+4. Overwhelming the server or client for eg increased number of requests can overwhelm server and large amount of response data can overwhelm client
+
+How Reactive Programming fits  in the picture -:
+
+1. It is a programming which involves building reactive systems working on asynchronous data streams 
+2. Can be used to build asynchronous, non-blocking, event-driven applications
+3. Require less no of threads(low memory utilisation) to handle large no of concurrent requests
+4. Has concept of backpressure to control data flow from source to consumer to maintain stability in system
+5. Uses functional style approach thus data streams can be transformed ie passed to other streams, filter, map, merge etc
+6. Reactive Systems are expected to be responsive in timely manner(even in failure scenarios, during varying load) and are message driven
+
+
+Concerns of Reactive Systems -:
+1. Data Consistency
+2. Separation of Concerns 
+3. Choice of Messaging System and it's implementation
+4. Failure Management
 
 ## Error Handling in Reactive Streams
 

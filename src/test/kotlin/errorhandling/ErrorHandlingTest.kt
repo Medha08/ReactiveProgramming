@@ -55,6 +55,8 @@ class ErrorHandlingTest {
             .verifyComplete()
     }
 
+    //same subscriber context
+    //gives fallback publisher
     @Test
     fun onErrorResumeSample(){
         val flux = Flux.just("1","2","3")

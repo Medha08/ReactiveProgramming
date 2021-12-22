@@ -1,10 +1,14 @@
-# Compiled class file
-*.class
-
-.idea
 .gradle
 gradle
 gradlew
+/build/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
 
 # Log file
 *.log
