@@ -4,7 +4,8 @@
   - [x] Drawbacks of Imperative Programming
   - [x] How Reactive Programming fits  in the picture
   - [x] Concerns of Reactive Systems
-- [ ] Reactive Stream Specification
+- [x] Reactive Stream Specification
+- [ ] Flux
 - [x] Error Handling in Reactive Streams
 
 
@@ -32,6 +33,21 @@ Concerns of Reactive Systems -:
 2. Separation of Concerns 
 3. Choice of Messaging System and it's implementation
 4. Failure Management
+
+## Reactive Streams Specification 
+
+1. Has 4 interfaces - Publisher,Subscriber,Subscription,Processor
+2. Publisher -
+   1. publish data asynchronously but has to subscribed to publish events
+   2. has function like subscribe which has Subscriber as parameter 
+3. Subscriber - 
+   1. consumes data by subscribing to publisher
+   2. has functions like onNext,onError,onComplete and are called according to signals given by publisher
+4. Subscription -
+   1. Is a contract between publisher and subscriber which both have to adhere to
+   2. has functions like request and cancel 
+   3. request function used to request the number of data items by subscriber to control data flow from publisher
+   4. cancel used when subscriber has to cancel subscribing to data stream 
 
 ## Error Handling in Reactive Streams
 

@@ -48,10 +48,13 @@ class ErrorHandlingTest {
         val flux = Flux.just("1","2","3")
             .concatWith(Flux.error(RuntimeException(" Runtime Exception Occurred")))
             .onErrorReturn("Some Error Occurred")
+            .concatWith(Flux.just("4"))
+
 
         StepVerifier.create(flux.log())
             .expectNext("1","2","3")
             .expectNext("Some Error Occurred")
+            .expectNext("4")
             .verifyComplete()
     }
 
